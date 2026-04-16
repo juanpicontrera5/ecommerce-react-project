@@ -5,7 +5,7 @@ import './CheckoutPage.css'
 import { useEffect, useState } from 'react';
 import { OrderSummary } from './OrderSummary';
 
-export function CheckoutPage({ cart }) {
+export function CheckoutPage({ cart, loadCart }) {
 
     const [paymentSummary, setPaymentSummary] = useState(null);
 
@@ -53,7 +53,7 @@ export function CheckoutPage({ cart }) {
 
                 <div className="checkout-grid">
                     
-                    <OrderSummary cart = {cart} deliveryOptions={deliveryOptions}/>
+                    <OrderSummary cart = {cart} deliveryOptions={deliveryOptions} loadCart = {loadCart}/>
 
                     <PaymentSummary paymentSummary={paymentSummary}/>
                 </div>
