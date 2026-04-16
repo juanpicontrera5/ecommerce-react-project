@@ -11,14 +11,6 @@ export function CheckoutPage({ cart }) {
 
     const [deliveryOptions, setDeliveryOptions] = useState([]);
 
-    // useEffect(()=>{
-    //     const getHomeData = async() => {
-    //         const response = await axios.get('/api/products')
-    //         setProducts (response.data)
-    //     };
-    //     getHomeData()
-    // }, [])
-
     useEffect(() => {
 
         const fetchCheckoutData = async() => {            

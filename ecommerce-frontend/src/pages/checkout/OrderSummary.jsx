@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { DeliveryOption } from "./DeliveryOptions";
-
+import { formatMoney } from "../../utils/money";
 
 export function OrderSummary({ cart, deliveryOptions }) {
     return (
@@ -28,11 +28,14 @@ export function OrderSummary({ cart, deliveryOptions }) {
                                         {cartItem.product.name}
                                     </div>
                                     <div className="product-price">
-                                        $10.90
+                                        {formatMoney(cartItem.product.priceCents)}
                                     </div>
                                     <div className="product-quantity">
                                         <span>
-                                            Quantity: <span className="quantity-label">2</span>
+                                            Quantity: 
+                                            <span className="quantity-label">
+                                                {cartItem.quantity}
+                                            </span>
                                         </span>
                                         <span className="update-quantity-link link-primary">
                                             Update
